@@ -48,11 +48,7 @@ A comprehensive web-based voting system for student union elections with real-ti
    - Frontend: http://localhost:5173
    - Backend API: http://localhost:5000
 
-### Default Admin Credentials
-- Username: `admin`
-- Password: `admin123`
 
-**⚠️ Important**: Change these credentials after first login!
 
 ## Deployment
 
