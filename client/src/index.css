@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #D3D9D4;
+  color: #212A31;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  /* Classic button styles */
+  .btn-primary {
+    background-color: #124E66;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+  .btn-primary:hover {
+    background-color: #212A31;
+  }
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-secondary {
+    background-color: #748D92;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+  .btn-secondary:hover {
+    background-color: #2E3944;
+  }
+  .btn-secondary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-outline {
+    border: 2px solid #124E66;
+    color: #124E66;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    background-color: transparent;
+  }
+  .btn-outline:hover {
+    background-color: #124E66;
+    color: white;
+  }
+  .btn-outline:active {
+    transform: scale(0.95);
+  }
+
+  /* Card styles */
+  .card {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(116, 141, 146, 0.3);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 1rem;
+  }
+  @media (min-width: 640px) {
+    .card {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Input styles */
+  .input-classic {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+    border: 2px solid rgba(116, 141, 146, 0.4);
+    color: #212A31;
+  }
+  .input-classic::placeholder {
+    color: rgba(116, 141, 146, 0.6);
+  }
+  .input-classic:focus {
+    outline: none;
+    border-color: #124E66;
+    box-shadow: 0 0 0 2px rgba(18, 78, 102, 0.2);
+  }
+
+  /* Table styles */
+  .table-classic {
+    min-width: 100%;
+    border: 1px solid rgba(116, 141, 146, 0.3);
+  }
+  .table-classic > * {
+    border-color: rgba(116, 141, 146, 0.3);
+  }
+
+  .table-classic thead {
+    background-color: rgba(116, 141, 146, 0.15);
+  }
+
+  .table-classic th {
+    padding: 0.75rem 0.75rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #212A31;
+  }
+  @media (min-width: 640px) {
+    .table-classic th {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .table-classic td {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid rgba(116, 141, 146, 0.2);
+    color: #2E3944;
+  }
+  @media (min-width: 640px) {
+    .table-classic td {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  /* Classic form styles */
+  .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #212A31;
+  }
+
+  /* Mobile-first responsive text */
+  .heading-1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #212A31;
+  }
+  @media (min-width: 640px) {
+    .heading-1 {
+      font-size: 1.875rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .heading-1 {
+      font-size: 2.25rem;
+    }
+  }
+
+  .heading-2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #212A31;
+  }
+  @media (min-width: 640px) {
+    .heading-2 {
+      font-size: 1.875rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .heading-2 {
+      font-size: 1.875rem;
+    }
+  }
+
+  .heading-3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #212A31;
+  }
+  @media (min-width: 640px) {
+    .heading-3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .text-body {
+    font-size: 0.875rem;
+    color: #2E3944;
+  }
+  @media (min-width: 640px) {
+    .text-body {
+      font-size: 1rem;
+    }
+  }
+}

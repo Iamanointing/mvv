@@ -1,0 +1,37 @@
+{
+  "name": "myvesavote",
+  "version": "1.0.0",
+  "description": "Students Union Voting Web System",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm run dev",
+    "install-all": "npm install && cd client && npm install",
+    "install-backend": "npm install --build-from-source=false || npm install",
+    "postinstall": "node -e \"console.log('Installation complete. If better-sqlite3 failed, install Visual Studio Build Tools.')\"",
+    "db:view": "node server/database/view-db.js",
+    "get-ip": "node get-local-ip.js"
+  },
+  "keywords": [
+    "voting",
+    "election",
+    "students-union"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.0",
+    "socket.io": "^4.6.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
